@@ -40,7 +40,7 @@
         <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
         <li><a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a></li>
       </ul>
-      <button class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú">
+      <button class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú" id="menuBtn">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
@@ -48,6 +48,18 @@
         </svg>
       </button>
     </nav>
+    <!-- Menú móvil oculto inicialmente -->
+    <div id="mobileMenu" class="hidden bg-[#6F4E37] p-4 md:hidden">
+      <ul class="space-y-4 text-gray-100 font-semibold">
+        <li><a href="index.html" class="hover:text-yellow-400 transition block">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition block">Sobre Nosotros</a></li>
+        <li><a href="biografias.html" class="hover:text-yellow-400 transition block">Biografías</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-400 transition block">Galería</a></li>
+        <li><a href="playlist.html" class="hover:text-yellow-400 transition block">Playlist</a></li>
+        <li><a href="videos.html" class="hover:text-yellow-400 transition block">Videos</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-400 transition block">Contacto</a></li>
+      </ul>
+    </div>
   </header>
 
   <!-- Contenido principal -->
@@ -70,6 +82,7 @@
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           class="rounded-lg shadow-lg max-w-xl"
           loading="lazy"
+          title="Playlist Oficial de SEA en Spotify"
         ></iframe>
       </div>
     </section>
@@ -79,6 +92,16 @@
   <footer class="bg-[#6F4E37] text-gray-100 py-6 text-center text-sm font-light">
     &copy; 2025 Siempre Estaré Aquí - Club de Fans de Carlos Rivera. Todos los derechos reservados.
   </footer>
+
+  <script>
+    // Toggle menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>

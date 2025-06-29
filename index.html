@@ -69,7 +69,8 @@
         <img src="img/logo.jpg" alt="Logo SEA" class="h-10 w-auto" />
         <span class="text-yellow-400 font-extrabold text-xl tracking-wide">SEA</span>
       </a>
-      <ul class="hidden md:flex space-x-8 text-gray-100 font-semibold">
+      <!-- Menú para escritorio y tablets -->
+      <ul id="menu" class="hidden md:flex space-x-8 text-gray-100 font-semibold">
         <li><a href="index.html" class="hover:text-yellow-400 transition">Inicio</a></li>
         <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition">Sobre Nosotros</a></li>
         <li><a href="biografias.html" class="hover:text-yellow-400 transition">Biografías</a></li>
@@ -78,7 +79,8 @@
         <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
         <li><a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a></li>
       </ul>
-      <button class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú">
+      <!-- Botón menú hamburguesa para móviles -->
+      <button id="menu-btn" class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
@@ -86,31 +88,41 @@
         </svg>
       </button>
     </nav>
+    <!-- Menú móvil (hidden por defecto) -->
+    <div id="mobile-menu" class="md:hidden bg-[#6F4E37] hidden">
+      <ul class="flex flex-col space-y-2 p-4 text-gray-100 font-semibold">
+        <li><a href="index.html" class="block hover:text-yellow-400 transition">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" class="block hover:text-yellow-400 transition">Sobre Nosotros</a></li>
+        <li><a href="biografias.html" class="block hover:text-yellow-400 transition">Biografías</a></li>
+        <li><a href="galeria.html" class="block hover:text-yellow-400 transition">Galería</a></li>
+        <li><a href="playlist.html" class="block hover:text-yellow-400 transition">Playlist</a></li>
+        <li><a href="videos.html" class="block hover:text-yellow-400 transition">Videos</a></li>
+        <li><a href="contacto.html" class="block hover:text-yellow-400 transition">Contacto</a></li>
+      </ul>
+    </div>
   </header>
   
-
   <!-- Hero -->
   <section class="relative bg-black">
     <img src="img/13.jpeg" alt="Carlos Rivera" class="absolute inset-0 w-full h-full object-cover opacity-30" />
     <div class="container mx-auto relative z-10 px-6 py-32 text-center">
-      <h1 class="text-5xl md:text-6xl font-bold text-yellow-400 mb-6">Siempre Estaré Aquí</h1>
-      <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-200 mb-12">El club de fans que une corazones al ritmo de Carlos Rivera.</p>
-      <a href="contacto.html" class="inline-block bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition">Únete Ahora</a>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-yellow-400 mb-6">Siempre Estaré Aquí</h1>
+      <p class="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-gray-200 mb-12">El club de fans que une corazones al ritmo de Carlos Rivera.</p>
+      <a href="contacto.html" class="inline-block bg-yellow-400 text-black font-semibold px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition">Únete Ahora</a>
     </div>
   </section>
 
   <!-- Banner Promocional del Álbum -->
-   <!-- Banner Promocional del Álbum -->
   <section id="banner-album" class="relative bg-[#1A1A1A] py-14 px-6 border-t border-[#FFD700]/20 opacity-0 translate-y-5 transition-all duration-700 ease-in-out">
     <button onclick="document.getElementById('banner-album').style.display='none'" 
-            class="absolute top-4 right-4 text-gray-400 hover:text-red-400 transition text-xl" 
+            class="absolute top-4 right-4 text-gray-400 hover:text-red-400 transition text-2xl md:text-xl" 
             aria-label="Cerrar banner">
       &times;
     </button>
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
       <div class="md:w-2/3 text-center md:text-left space-y-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-yellow-400">¿Qué esperas para escuchar el nuevo álbum?</h2>
-        <p class="text-lg text-gray-300 italic">*¿Qué significa el amor?* ya está disponible en Spotify.</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">¿Qué esperas para escuchar el nuevo álbum?</h2>
+        <p class="text-base sm:text-lg text-gray-300 italic">*¿Qué significa el amor?* ya está disponible en Spotify.</p>
         <a href="https://open.spotify.com/intl-es/album/1tRHRbIHP3vNA6M6h598xe?si=0HCLYHavQz2eYKnOvOLkew" 
            target="_blank" 
            class="inline-block mt-4 bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition">
@@ -119,7 +131,7 @@
       </div>
       <div class="md:w-1/3 flex justify-center">
         <img src="img/baner.jpg" alt="Portada del álbum ¿Qué significa el amor?" 
-             class="w-52 md:w-64 rounded-xl shadow-md border border-[#FFD700]/30" />
+             class="w-48 sm:w-52 md:w-64 rounded-xl shadow-md border border-[#FFD700]/30" />
       </div>
     </div>
   </section>
@@ -130,9 +142,15 @@
       setTimeout(() => {
         banner.classList.remove('opacity-0', 'translate-y-5');
       }, 200);
+
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
     });
   </script>
-
 
   <!-- Sección Galería / Playlist / Videos con imágenes de fondo -->
   <section class="container mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
@@ -141,9 +159,9 @@
     <div class="relative rounded-lg overflow-hidden shadow-lg group">
       <img src="img/galeria.jpg" alt="Galería" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition duration-300" />
       <div class="relative z-10 bg-[#6F4E37]/80 p-8 backdrop-blur-md rounded-lg h-full flex flex-col justify-between">
-        <h2 class="text-3xl font-semibold text-yellow-400 mb-4">Galería</h2>
-        <p class="text-gray-200 mb-6">Explora momentos únicos y las mejores fotos de Carlos y su comunidad.</p>
-        <a href="galeria.html" class="inline-block border-2 border-yellow-400 text-yellow-400 font-semibold px-6 py-2 rounded hover:bg-yellow-400 hover:text-black transition">Ver Galería</a>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-yellow-400 mb-4">Galería</h2>
+        <p class="text-gray-200 mb-6 text-sm sm:text-base">Explora momentos únicos y las mejores fotos de Carlos y su comunidad.</p>
+        <a href="galeria.html" class="inline-block border-2 border-yellow-400 text-yellow-400 font-semibold px-6 py-2 rounded hover:bg-yellow-400 hover:text-black transition text-sm sm:text-base">Ver Galería</a>
       </div>
     </div>
 
@@ -151,9 +169,9 @@
     <div class="relative rounded-lg overflow-hidden shadow-lg group">
       <img src="img/playlist.jpg" alt="Playlist" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition duration-300" />
       <div class="relative z-10 bg-[#6F4E37]/80 p-8 backdrop-blur-md rounded-lg h-full flex flex-col justify-between">
-        <h2 class="text-3xl font-semibold text-yellow-400 mb-4">Playlist</h2>
-        <p class="text-gray-200 mb-6">Disfruta de las canciones que todos los fans amamos en Spotify.</p>
-        <a href="playlist.html" class="inline-block border-2 border-yellow-400 text-yellow-400 font-semibold px-6 py-2 rounded hover:bg-yellow-400 hover:text-black transition">Escuchar Playlist</a>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-yellow-400 mb-4">Playlist</h2>
+        <p class="text-gray-200 mb-6 text-sm sm:text-base">Disfruta de las canciones que todos los fans amamos en Spotify.</p>
+        <a href="playlist.html" class="inline-block border-2 border-yellow-400 text-yellow-400 font-semibold px-6 py-2 rounded hover:bg-yellow-400 hover:text-black transition text-sm sm:text-base">Escuchar Playlist</a>
       </div>
     </div>
 
@@ -161,9 +179,9 @@
     <div class="relative rounded-lg overflow-hidden shadow-lg group">
       <img src="img/videos.jpg" alt="Videos" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition duration-300" />
       <div class="relative z-10 bg-[#6F4E37]/80 p-8 backdrop-blur-md rounded-lg h-full flex flex-col justify-between">
-        <h2 class="text-3xl font-semibold text-yellow-400 mb-4">Videos</h2>
-        <p class="text-gray-200 mb-6">Revisa los mejores videos, covers y momentos destacados del club.</p>
-        <a href="videos.html" class="inline-block border-2 border-yellow-400 text-yellow-400 font-semibold px-6 py-2 rounded hover:bg-yellow-400 hover:text-black transition">Ver Videos</a>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-yellow-400 mb-4">Videos</h2>
+        <p class="text-gray-200 mb-6 text-sm sm:text-base">Revisa los mejores videos, covers y momentos destacados del club.</p>
+        <a href="videos.html" class="inline-block border-2 border-yellow-400 text-yellow-400 font-semibold px-6 py-2 rounded hover:bg-yellow-400 hover:text-black transition text-sm sm:text-base">Ver Videos</a>
       </div>
     </div>
 

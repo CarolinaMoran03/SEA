@@ -25,38 +25,54 @@
 <body class="bg-[#121212] text-gray-100 font-sans leading-relaxed">
 
   <!-- Navbar -->
-    <header class="bg-[#6F4E37] shadow-md">
-        <nav class="container mx-auto flex items-center justify-between p-4">
-            <a href="index.html" class="flex items-center space-x-3">
-            <img src="img/logo.jpg" alt="Logo SEA" class="h-10 w-auto" />
-            <span class="text-yellow-400 font-extrabold text-xl tracking-wide">SEA</span>
-            </a>
-            <ul class="hidden md:flex space-x-8 text-gray-100 font-semibold">
-            <li><a href="index.html" class="hover:text-yellow-400 transition">Inicio</a></li>
-            <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition">Sobre Nosotros</a></li>
-            <li><a href="biografias.html" class="hover:text-yellow-400 transition">Biografías</a></li>
-            <li><a href="galeria.html" class="hover:text-yellow-400 transition">Galería</a></li>
-            <li><a href="playlist.html" class="hover:text-yellow-400 transition">Playlist</a></li>
-            <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
-            <li><a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a></li>
-            </ul>
-            <button class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-            </button>
-        </nav>
-    </header>
+  <header class="bg-[#6F4E37] shadow-md">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/logo.jpg" alt="Logo SEA" class="h-10 w-auto" />
+        <span class="text-yellow-400 font-extrabold text-xl tracking-wide">SEA</span>
+      </a>
+      
+      <!-- Menu desktop -->
+      <ul id="menu" class="hidden md:flex space-x-8 text-gray-100 font-semibold">
+        <li><a href="index.html" class="hover:text-yellow-400 transition">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition">Sobre Nosotros</a></li>
+        <li><a href="biografias.html" class="hover:text-yellow-400 transition">Biografías</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-400 transition">Galería</a></li>
+        <li><a href="playlist.html" class="hover:text-yellow-400 transition">Playlist</a></li>
+        <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a></li>
+      </ul>
+      
+      <!-- Botón menú hamburguesa -->
+      <button id="btn-menu" class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </nav>
 
+    <!-- Menu móvil -->
+    <div id="menu-mobile" class="hidden bg-[#6F4E37] text-gray-100 font-semibold px-6 pb-4 md:hidden">
+      <ul class="flex flex-col space-y-4">
+        <li><a href="index.html" class="hover:text-yellow-400 transition block">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition block">Sobre Nosotros</a></li>
+        <li><a href="biografias.html" class="hover:text-yellow-400 transition block">Biografías</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-400 transition block">Galería</a></li>
+        <li><a href="playlist.html" class="hover:text-yellow-400 transition block">Playlist</a></li>
+        <li><a href="videos.html" class="hover:text-yellow-400 transition block">Videos</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-400 transition block">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
 
   <!-- Contenido principal -->
   <main class="container mx-auto px-6 py-20 max-w-3xl">
 
     <h1 class="text-yellow-400 text-4xl font-bold mb-8 text-center">Contacto</h1>
 
-    <form action="#" method="POST" class="bg-[#6F4E37] p-8 rounded-lg shadow-lg">
+    <form id="contactForm" action="https://formspree.io/f/xwpbadpe" method="POST" class="bg-[#6F4E37] p-8 rounded-lg shadow-lg">
       <div class="mb-6">
         <label for="nombre" class="block text-gray-200 font-semibold mb-2">Nombre completo</label>
         <input
@@ -101,10 +117,10 @@
     <section class="mt-12 text-center text-gray-300">
       <h2 class="text-2xl font-semibold mb-4">O contáctanos por redes sociales</h2>
       <div class="flex justify-center space-x-8 text-yellow-400 text-3xl">
-        <a href="https://instagram.com/clubsea" target="_blank" aria-label="Instagram Club SEA" class="hover:text-yellow-300 transition">
+        <a href="https://www.instagram.com/siemprestareaqui_cr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram Club SEA" class="hover:text-yellow-300 transition">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://facebook.com/clubsea" target="_blank" aria-label="Facebook Club SEA" class="hover:text-yellow-300 transition">
+        <a href="https://www.facebook.com/Siempreestareaquicarlosrivera" target="_blank" aria-label="Facebook Club SEA" class="hover:text-yellow-300 transition">
           <i class="fab fa-facebook"></i>
         </a>
         <a href="mailto:contacto@clubsea.com" aria-label="Correo electrónico Club SEA" class="hover:text-yellow-300 transition">
@@ -119,6 +135,36 @@
   <footer class="bg-[#6F4E37] text-gray-100 py-6 text-center text-sm font-light">
     &copy; 2025 Siempre Estaré Aquí - Club de Fans de Carlos Rivera. Todos los derechos reservados.
   </footer>
+
+  <script>
+    // Toggle menú móvil
+    const btnMenu = document.getElementById('btn-menu');
+    const menuMobile = document.getElementById('menu-mobile');
+
+    btnMenu.addEventListener('click', () => {
+      menuMobile.classList.toggle('hidden');
+    });
+
+    // Enviar formulario con fetch a Formspree y mostrar feedback
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert('¡Mensaje enviado! Gracias por contactarte.');
+        form.reset();
+      } else {
+        alert('Hubo un problema al enviar el mensaje. Intenta de nuevo.');
+      }
+    });
+  </script>
 
 </body>
 </html>
