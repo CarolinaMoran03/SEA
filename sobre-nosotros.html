@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="img/logo.jpg" type="image/png" />
+  <title>Sobre Nosotros | SEA - Siempre Estaré Aquí</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN para iconos sociales -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    ::selection {
+      background-color: #FFD700;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="bg-[#121212] text-gray-100 font-sans leading-relaxed">
+
+  <!-- Navbar -->
+  <header class="bg-[#6F4E37] shadow-md">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+        <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/logo.jpg" alt="Logo SEA" class="h-10 w-auto" />
+        <span class="text-yellow-400 font-extrabold text-xl tracking-wide">SEA</span>
+        </a>
+        <ul class="hidden md:flex space-x-8 text-gray-100 font-semibold">
+        <li><a href="index.html" class="hover:text-yellow-400 transition">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition">Sobre Nosotros</a></li>
+        <li><a href="biografias.html" class="hover:text-yellow-400 transition">Biografías</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-400 transition">Galería</a></li>
+        <li><a href="playlist.html" class="hover:text-yellow-400 transition">Playlist</a></li>
+        <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a></li>
+        </ul>
+        <button class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        </button>
+    </nav>
+    </header>
+
+
+  <!-- Contenido principal -->
+  <main class="container mx-auto px-6 py-20 max-w-5xl">
+
+    <h1 class="text-yellow-400 text-4xl font-bold mb-8 text-center">Sobre Nosotros</h1>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">¿Quiénes somos?</h2>
+      <p class="text-gray-300 leading-relaxed text-lg">
+        SEA (Siempre Estaré Aquí) es el club oficial de fans de Carlos Rivera, una comunidad apasionada y global que une a seguidores de todas partes del mundo. Nuestro objetivo es compartir el amor por la música, la historia y la inspiración que Carlos nos brinda con cada canción.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Nuestra misión</h2>
+      <p class="text-gray-300 leading-relaxed text-lg">
+        Fomentar un espacio donde los fans puedan conectar, compartir experiencias, contenido exclusivo, y apoyar la carrera de Carlos Rivera. Sea donde sea que estés, siempre encontrarás un lugar en SEA.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Lo que hacemos</h2>
+      <ul class="list-disc list-inside text-gray-300 text-lg space-y-2">
+        <li>Organizamos eventos y encuentros virtuales para fans.</li>
+        <li>Compartimos contenido exclusivo: fotos, videos, playlists y más.</li>
+        <li>Apoyamos campañas solidarias en nombre del club y del cantante.</li>
+        <li>Mantenemos una comunidad activa y respetuosa en redes sociales.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Únete a nosotros</h2>
+      <p class="text-gray-300 leading-relaxed text-lg mb-6">
+        Si te apasiona la música de Carlos Rivera y quieres ser parte de una comunidad que vibra con cada nota, te invitamos a unirte. No importa de dónde seas, en SEA siempre tendrás un hogar.
+      </p>
+      <a href="contacto.html" class="inline-block bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition">Contáctanos para más info</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#6F4E37] text-gray-100 py-6 text-center text-sm font-light">
+    &copy; 2025 Siempre Estaré Aquí - Club Oficial de Fans de Carlos Rivera. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

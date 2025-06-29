@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="img/logo.jpg" type="image/png" />
+  <title>Galería | SEA - Siempre Estaré Aquí</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    ::selection { background-color: #FFD700; color: #000; }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 50;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal img {
+      max-height: 80vh;
+      max-width: 90vw;
+      border: 4px solid #FFD700;
+      border-radius: 1rem;
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      color: #FFD700;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 60;
+      user-select: none;
+    }
+
+    .nav-arrow:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .left-arrow { left: 1rem; }
+    .right-arrow { right: 1rem; }
+  </style>
+</head>
+<body class="bg-[#121212] text-gray-100 font-sans leading-relaxed">
+
+  <!-- Navbar -->
+  <header class="bg-[#6F4E37] shadow-md">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/logo.jpg" alt="Logo SEA" class="h-10 w-auto" />
+        <span class="text-yellow-400 font-extrabold text-xl tracking-wide">SEA</span>
+      </a>
+      <ul class="hidden md:flex space-x-8 text-gray-100 font-semibold">
+        <li><a href="index.html" class="hover:text-yellow-400 transition">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition">Sobre Nosotros</a></li>
+        <li><a href="biografias.html" class="hover:text-yellow-400 transition">Biografías</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-400 transition">Galería</a></li>
+        <li><a href="playlist.html" class="hover:text-yellow-400 transition">Playlist</a></li>
+        <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container mx-auto px-6 py-20 max-w-6xl">
+    <h1 class="text-yellow-400 text-4xl font-bold mb-12 text-center">Galería de Fotos</h1>
+
+    <section id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Imágenes del 1 al 24 -->
+      <script>
+        for (let i = 1; i <= 24; i++) {
+          document.write(`
+            <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-300 cursor-pointer">
+              <img src="img/${i}.jpeg" alt="Imagen ${i}" class="w-full h-60 object-cover" onclick="openModal(${i - 1})" />
+            </div>
+          `);
+        }
+      </script>
+    </section>
+  </main>
+
+  <!-- Modal con navegación -->
+  <div id="imageModal" class="modal">
+    <span class="absolute top-4 right-6 text-yellow-400 text-4xl cursor-pointer z-50" onclick="closeModal()">&times;</span>
+    <span class="nav-arrow left-arrow" onclick="changeImage(-1)">&#10094;</span>
+    <img id="modalImage" src="" alt="Imagen ampliada" />
+    <span class="nav-arrow right-arrow" onclick="changeImage(1)">&#10095;</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#6F4E37] text-gray-100 py-6 text-center text-sm font-light">
+    &copy; 2025 Siempre Estaré Aquí - Club Oficial de Fans de Carlos Rivera. Todos los derechos reservados.
+  </footer>
+
+  <!-- Script modal con navegación -->
+  <script>
+    const images = Array.from({ length: 24 }, (_, i) => `img/${i + 1}.jpeg`);
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      document.getElementById('modalImage').src = images[currentIndex];
+      document.getElementById('imageModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+
+    function changeImage(step) {
+      currentIndex = (currentIndex + step + images.length) % images.length;
+      document.getElementById('modalImage').src = images[currentIndex];
+    }
+
+    // Teclado
+    document.addEventListener('keydown', e => {
+      const modalOpen = document.getElementById('imageModal').classList.contains('active');
+      if (!modalOpen) return;
+      if (e.key === 'ArrowLeft') changeImage(-1);
+      if (e.key === 'ArrowRight') changeImage(1);
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Swipe táctil
+    let touchStartX = 0;
+    document.getElementById('imageModal').addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    });
+
+    document.getElementById('imageModal').addEventListener('touchend', e => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+      if (diff > 50) changeImage(1);  // swipe izquierda
+      else if (diff < -50) changeImage(-1);  // swipe derecha
+    });
+  </script>
+
+</body>
+</html>

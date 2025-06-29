@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="img/logo.jpg" type="image/png" />
+  <title>Biografías | SEA - Siempre Estaré Aquí</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    ::selection {
+      background-color: #FFD700;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="bg-[#121212] text-gray-100 font-sans leading-relaxed">
+
+  <!-- Navbar -->
+  <header class="bg-[#6F4E37] shadow-md">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+        <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/logo.jpg" alt="Logo SEA" class="h-10 w-auto" />
+        <span class="text-yellow-400 font-extrabold text-xl tracking-wide">SEA</span>
+        </a>
+        <ul class="hidden md:flex space-x-8 text-gray-100 font-semibold">
+        <li><a href="index.html" class="hover:text-yellow-400 transition">Inicio</a></li>
+        <li><a href="sobre-nosotros.html" class="hover:text-yellow-400 transition">Sobre Nosotros</a></li>
+        <li><a href="biografias.html" class="hover:text-yellow-400 transition">Biografías</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-400 transition">Galería</a></li>
+        <li><a href="playlist.html" class="hover:text-yellow-400 transition">Playlist</a></li>
+        <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-400 transition">Contacto</a></li>
+        </ul>
+        <button class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menú">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        </button>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container mx-auto px-6 py-20 max-w-5xl space-y-16">
+
+    <section>
+      <h1 class="text-yellow-400 text-4xl font-bold mb-8 text-center">Biografías</h1>
+    </section>
+
+   <section class="bg-[#6F4E37] p-8 rounded-lg shadow-lg space-y-8">
+    <h2 class="text-3xl font-semibold text-yellow-400 mb-6">Mini Biografía del Club SEA</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+        <img src="img/fundadora.jpg" alt="Dalia, Fundadora del Club SEA" class="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-yellow-400" />
+        <p class="text-gray-300 text-lg leading-relaxed">
+        El club de fans nació gracias a Dalia, quien fue la fundadora y primera presidenta de esta comunidad. Bajo su liderazgo visionario, el club se consolidó como un espacio de unión y apoyo entre los seguidores de Carlos Rivera.<br /><br />
+        Durante su gestión, se lograron importantes iniciativas como campañas de ayuda social, donaciones, visitas a hospitales, dinámicas interactivas y encuentros con fans, fortaleciendo el sentido de pertenencia y solidaridad dentro del club.<br /><br />
+        Gracias a su dedicación y pasión, el Club SEA se ha convertido en una comunidad muy unidad y alegre.
+        </p>
+    </div>
+    </section>
+
+
+    <section class="bg-[#3B2F2F] p-8 rounded-lg shadow-lg space-y-8">
+      <h2 class="text-3xl font-semibold text-yellow-400 mb-6">Biografía de Carlos Rivera</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img src="img/CR.jpeg" alt="Carlos Rivera" class="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-yellow-400" />
+        <div>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Carlos Rivera, nacido en 1986 en Tlaxcala, México, es un cantante, actor y compositor reconocido internacionalmente. Ganador de la tercera generación del reality show "La Academia", ha destacado por su voz poderosa y su versatilidad artística. Con más de una década en la industria, Carlos ha conquistado escenarios en México, Estados Unidos y España, entre otros, y ha dejado una huella imborrable en la música latina.
+          </p>
+          <p class="text-gray-300 text-lg leading-relaxed mt-4">
+            Además de su carrera musical, Carlos ha participado en musicales y proyectos televisivos que han enriquecido su trayectoria. Su compromiso con causas sociales y su humildad lo han convertido en un ícono admirado por millones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#6F4E37] text-gray-100 py-6 text-center text-sm font-light">
+    &copy; 2025 Siempre Estaré Aquí - Club Oficial de Fans de Carlos Rivera. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
